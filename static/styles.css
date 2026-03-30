@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: #f5f7fb;
+}
+.header {
+    background: #0d47a1;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+.nav a {
+    color: white;
+    margin-left: 25px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.hero {
+    padding: 100px 40px;
+    text-align: center;
+    background: linear-gradient(120deg, #0d47a1, #1976d2);
+    color: white;
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+.upload-section {
+    max-width: 650px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+input[type="file"] {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+.btn {
+    padding: 12px 20px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.features {
+    margin: 60px auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+.feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.feature-box h3 {
+    margin: 0 0 10px 0;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0d47a1;
+    color: white;
+    margin-top: 40px;
+}
+.about-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.member {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 220px;
+    text-align:center;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 40%;
+    margin-bottom: 10px;
+    border: 3px solid #007BFF; /* optional border */
+}
+
+
+

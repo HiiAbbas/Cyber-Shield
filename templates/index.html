@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberShield — AI Threat Detection System</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">CyberShield</div>
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="#">Dashboard</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>AI-Powered File Scanning & Threat Detection</h1>
+        <p>Upload files or provide a URL to detect malware, viruses, and anomalies in real-time using CyberShield's intelligent security engine.</p>
+    </section>
+
+    <section class="upload-section">
+        <form action="/scan" method="POST" enctype="multipart/form-data">
+            <!-- File Upload -->
+            <label for="file">Upload a file:</label>
+            <input type="file" name="file" id="file">
+            <br /><br />
+
+            <!-- URL Input -->
+            <label for="file_url">Or enter file URL:</label>
+            <input type="text" name="file_url" id="file_url" placeholder="https://example.com/file.exe">
+            <br /><br />
+
+            <button type="submit" class="btn">Start Scan</button>
+        </form>
+    </section>
+
+    <section class="features">
+        <div class="feature-box">
+            <h3>⚡ Real-Time Scanning</h3>
+            <p>Uploads are scanned instantly with AI models and threat intelligence APIs.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🔍 Threat Classification</h3>
+            <p>Files are categorized as Safe, Suspicious, or Infected with severity levels.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📊 Database Logging</h3>
+            <p>Every scan is stored in the database for future analysis and reporting.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>Our Team</h2>
+        <p>Meet the CyberShield Development team behind this AI-powered Threat Detection system:</p>
+        <div class="team-members">
+            <div class="member">
+                <img src="{{ url_for('static', filename='images/abbas.jpg') }}" width="200" alt="Hameed Abbas">
+                <h3>Hameed Abbas</h3>
+                <p>Project Lead & Backend Developer, Database & Deployment Manager</p>
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='images/hammad.jpg') }}" alt="Hamaad Masood" class="team-photo">
+                <h3>Hamaad Masood</h3>
+                <p>Project Co-lead, Frontend Developer & Machine Learning & Security Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">© 2025 CyberShield — AI Threat Detection System</footer>
+
+</body>
+</html>

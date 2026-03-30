@@ -1,0 +1,12 @@
+
+CREATE DATABASE IF NOT EXISTS CyberShield;
+USE CyberShield;
+CREATE TABLE IF NOT EXISTS scanned_files (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    filesize BIGINT NOT NULL,
+    filehash VARCHAR(255) NOT NULL,
+    severity VARCHAR(50),
+    vt_status VARCHAR(50),
+    scan_time DATETIME DEFAULT CURRENT_TIMESTAMP
+);

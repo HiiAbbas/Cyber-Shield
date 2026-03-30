@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan Result | CyberShield</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+        }
+        .low { color: green; font-weight: bold; }
+        .medium { color: orange; font-weight: bold; }
+        .high { color: red; font-weight: bold; }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #007bff;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Scan Result</h2>
+
+    <p><b>File Name:</b> {{ filename }}</p>
+    <p><b>VirusTotal Status:</b> {{ status }}</p>
+
+    <p><b>Severity:</b>
+        <span class="
+            {% if severity == 'Low' %}low
+            {% elif severity == 'Medium' %}medium
+            {% else %}high
+            {% endif %}">
+            {{ severity }}
+        </span>
+    </p>
+
+    <p><b>ML Analysis:</b> {{ ml_status }}</p>
+
+    <!-- Chart Section -->
+    <h3>Scan Severity Distribution</h3>
+    <img src="data:image/png;base64,{{ chart }}" alt="Severity Chart">
+
+    <a href="/">🔁 Scan another file</a>
+</div>
+
+</body>
+</html>
